@@ -1,0 +1,197 @@
+:root{
+    --first-color:#db0000;
+    --second-color:#f00101;
+    --fifth-color:#181818;
+    --third-color: #564d4d;
+    --fourth-color: #831010;
+    --white-color: #ffffff;
+    --black-color: #000000;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+body{
+    min-height: 100svh;
+    background: var(--fifth-color);
+    color: var(--white-color);
+}
+
+.container{
+    width: 100%;
+}
+
+.header_container{
+    background: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+/* HEADER START */
+
+header{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+
+}
+
+.netflix_logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navigation{
+    display: flex;
+    gap: 1rem;
+    /* background: red; */
+    align-items: center;
+}
+
+.btn{
+    min-height: 30px;
+    min-width: 100px;
+    border: 1px solid var(--white-color);
+    background-color: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.join{
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+}
+
+.join:hover{
+    background-color: #f00101;
+}
+
+
+.signin:hover{
+    background-color: var(--third-color);
+}
+/* HEADER END */
+
+/* MAIN STARTS */
+
+
+main{
+    margin-top: 100px;
+}
+
+section{
+    max-width: 1400px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    margin-block: 50px ;
+}
+
+.movie-category{
+    margin-block: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.movie-row{
+    display: flex;
+    overflow-x: scroll;
+    gap: 0.8rem;
+    flex-wrap:nowrap;
+}
+
+.movie-row img{
+    border-radius: 4px;
+}
+
+/* MAIN ENDS */
+
+
+/* FOOTER STARTS */
+
+footer{
+    background: var(--black-color);
+    margin-top: 50px;
+    padding: 3rem 2rem;
+    overflow-x: hidden;
+    /* max-width: 1400px; */
+    /* margin: 0 auto; */
+}
+
+.footer-container{
+    padding: 0 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-container .links{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    gap: 8rem;
+
+}
+
+
+.links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.links li a{
+    color: #bbb4b4;
+}
+.links li:hover, footer p:hover{
+    text-decoration: underline;
+}
+
+/* FOOTER ENDS */
+
+@media(max-width: 1024px){
+    header span{
+        display: none;
+    }
+}
+
+@media(max-width :500px){
+    .footer-container .links{
+        gap: 3rem;
+    }
+}
+
+@media(max-width :390px){
+    header button{
+        display: none;
+    }
+    .footer-container .links{
+        gap: 2rem;
+    }
+}
